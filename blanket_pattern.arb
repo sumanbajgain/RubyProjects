@@ -1,0 +1,30 @@
+=begin
+Write a code that creates a "blanket pattern" that prints a string "rows" number of times
+by putting the first item in the pattern to the end every time.
+=end
+
+
+# Method 1: using string
+pattern = "abcdefghij"
+rows = 20
+
+rows.times do |i|
+    first = pattern[0]
+    remaining = pattern[1..pattern.length()]
+    pattern = remaining + first
+    puts pattern
+end
+
+
+# Method 2: using arrays
+#secpattern = ["*", "$", "%", "&", "@", "!"]
+secpattern = "*$%&@!"
+lines = 25
+
+secarray = secpattern.split('')
+
+lines.times do |j|
+    front = secarray.shift
+    secarray << front
+    puts secarray.join
+end

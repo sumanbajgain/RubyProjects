@@ -1,0 +1,87 @@
+
+i = 5
+loop do
+    break if i <=0
+    puts "Countdown: #{i}"
+    i -= 1
+end
+puts "Blast off!"
+
+j = 5
+while j>0
+    puts "Counting down: #{j}"
+    j = j-1
+end
+puts "Blasting off now!"
+
+k = 5
+until k ==0
+    puts "Countdown: #{k}"
+    k = k -1
+end
+puts "Blast off!"
+
+cart = ["apple", "banana", "carrot"]
+until cart.empty?
+    first = cart.shift
+    puts first.upcase
+end
+
+fruits = ["banana", "apple", "pear"]
+fruits.each do |fruit|
+    puts fruit.capitalize
+end
+
+for fruit in fruits
+    puts fruit.upcase
+    puts fruit[1]
+end
+
+m = 5
+m.times do
+    puts "Countdown #{m}"
+    m -=1
+end
+puts "Blast off!"
+
+5.times do |n|
+    puts "Countdown #{5-n}"
+end
+puts "Blasting off!"
+
+5.downto(1) do |o|
+    puts "Counting down: #{o}"
+end
+puts "Blast off!"
+
+5.downto(1) {|p| puts "Counting down: #{p}"}
+puts "Blasting off!"
+
+fruits = ["banana" , "apple" , "pear"]
+fruits.each do |fruit|
+    puts fruit.capitalize
+end
+
+
+=begin
+pattern = ["a", "b", "c", "d"]
+rows = 20
+
+rows.times do |i|
+    first = pattern[0]
+    remaining = pattern[1..pattern.length()]
+    pattern = remaining + first
+    puts pattern
+end
+
+
+pattern = "abcdefghij"
+rows = 20
+
+rows.times do |i|
+    first = pattern[0]
+    remaining = pattern[1..pattern.length()]
+    pattern = remaining + first
+    puts pattern
+end
+=end
